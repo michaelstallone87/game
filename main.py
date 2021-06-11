@@ -27,8 +27,8 @@ while janela_aberta:
 
     if comandos[pygame.K_LEFT]:
         x -= velocidade
-    janela.fill((0,0,0))
-    pygame.draw.circle(janela, (122, 122, 255), (x, y), 25)
+    janela.fill((0, 0, 0))
+    pygame.draw.circle(janela, (0, 0, 255), (x, y), 25)
     pygame.display.update()
 
 pygame.quit()
