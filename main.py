@@ -1,14 +1,13 @@
 import random
-
 import pygame
 
 pygame.init()
 x = 336
 y = 400
-pos_x = random.randrange(200, 600, 150)
+pos_x = random.randrange(260, 450, 50)
 pos_y = 200
 velocidade = 10
-velocidade_carros = 10
+velocidade_carros = velocidade
 y_tela = -1387
 
 fundo = pygame.image.load('data/pista.png')
@@ -37,28 +36,31 @@ while janela_aberta:
     comandos = pygame.key.get_pressed()
     if comandos[pygame.K_UP]:
         y -= velocidade
-    if (y <= 0):
-        y = 0
+    if (y <= -157):
+        y = -157
     if comandos[pygame.K_DOWN]:
         y += velocidade
     if (y >= 457):
         y = 457
     if comandos[pygame.K_RIGHT]:
         x += velocidade
-    if (x >= 710):
-        x = 710
+    if (x >= 450):
+        x = 450
     if comandos[pygame.K_LEFT]:
         x -= velocidade
-    if (x <= 0):
-        x = 0
+    if (x <= 260):
+        x = 260
     if (pos_y >= 757):
         pos_y = -157
-        pos_x = random.randrange(200, 600, 100)
-        velocidade_carros += 10
+        pos_x = random.randrange(260, 450, 50)
+        velocidade_carros += 1
     if (y_tela >= 0):
+        y -= velocidade
+        pos_y -= 10
+        if (pos_y <= -157):
+            pos_y = -157
         y_tela = 0
         velocidade_carros = 0
-        pos_y = pos_y
     pos_y += velocidade_carros
     y_tela += velocidade_carros / 2
 
