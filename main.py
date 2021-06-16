@@ -5,9 +5,9 @@ pygame.init()
 x = 336
 y = 400
 pos_x = random.randrange(260, 450, 50)
-pos_y = 200
+pos_y = -157
 velocidade = 10
-velocidade_carros = velocidade
+velocidade_carros = velocidade * 1.5
 y_tela = -1387
 
 fundo = pygame.image.load('data/pista.png')
