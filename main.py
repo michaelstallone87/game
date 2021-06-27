@@ -20,6 +20,8 @@ carro_prata = pygame.image.load('data/carro_prata.png')
 carro_verde = pygame.image.load('data/carro_verde.png')
 carro_vermelho = pygame.image.load('data/carro_vermelho.png')
 carro_vermelho_amarelo = pygame.image.load('data/carro_vermelho_amarelo.png')
+carros = ['carro_amarelo', 'carro_azul', 'carro_azul_rosa', 'carro_dourado', 'carro_prata', 'carro_verde',
+          'carro_vermelho', 'carro_vermelho_amarelo']
 
 carro_principal = carro_vermelho_amarelo
 
@@ -66,7 +68,8 @@ while janela_aberta:
 
     janela.blit(fundo, (0, y_tela))
     janela.blit(carro_principal, (x, y))
-    janela.blit(carro_azul, (pos_x, pos_y))
+    janela.blit(carro_azul_rosa, (pos_x, pos_y))
+
     pygame.display.update()
 
 pygame.quit()
