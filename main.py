@@ -30,7 +30,7 @@ pygame.display.set_caption('Game')
 
 janela_aberta = True
 while janela_aberta:
-    pygame.time.delay(50)
+    pygame.time.delay(35)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             janela_aberta = False
